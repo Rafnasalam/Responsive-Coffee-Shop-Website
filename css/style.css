@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+:root{
+    --bg-color: rgb(203, 173, 141);
+    --bg2-color: #3a2c21;
+    --text-color: #312520;
+    --text2-color: #1b0901;
+    --text3-color: #a89c94e6;
+}
+body{
+    background-color: var(--bg2-color);
+}
+
+.logo img{
+    height: 5rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 98%;
+    background-color: #a89c94e6;
+    padding: 15px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text2-color);
+    font-weight: 800;
+    font-size: 20px;
+    margin: 15px 22px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    background-color: #8f755f;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .50s ease;
+}
+.toggle_btn{
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+section{
+    padding: 100px 17% 60px;
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/images/bg.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.home::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #3a2c21 100%);
+}
+.home-text h3{
+    font-family: 'Merienda One', cursive;
+    font-size: 40px;
+    color: var(--text2-color);
+    margin-bottom: 10px;
+    font-weight: 1000;
+}
+.home-text p{
+    font-size: 1.5rem;
+    font-family: 'Merienda One', cursive;
+    color: var(--text-color);
+    line-height: 30px;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 40px;
+    background-color: #3c2318;
+    color: aliceblue;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    font-size: 15px;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: translateX(10px);
+    border: 2px solid var(--text-color);
+    color: #8f755f;
+} 
+
+header.sticky{
+    padding: 8px 17%;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 8rem;
+}
+.about-img img{
+    width: 260px;
+    height: auto;
+    border-radius: 10px;
+}
+.about-content h3{
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Merienda One', cursive;
+    color: var(--text3-color);
+    margin-bottom: 20px;
+}
+.about-content p{
+    font-size: 1rem;
+    color: var(--text3-color);
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+.menu {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+.blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('/images/menu.jpg')no-repeat center center/cover;
+    filter: blur(2px);
+    mask-image: linear-gradient(to bottom, transparent 5%, black 30%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 30%);
+    transform: scale(1.1);
+    z-index: 0;
+} 
+.menu-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+} 
+.menu-content h2 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    font-family: 'Merienda One', cursive;
+    margin-bottom: 30px;
+    color: var(--text3-color)
+} 
+.menu-cards {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+.menu-cards img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}  
+.menu-cards img:hover {
+    transform: scale(1.30);
+}
+
+.gallery .heading{
+    font-size: 2.6rem;
+    font-weight: 900;
+    font-family: 'Merienda One', cursive;
+    margin-bottom: 30px;
+    color: var(--text3-color);
+    text-align: center;
+}
+.gallery .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap:1.5rem;
+    justify-content: center;
+}
+.gallery .box-container .box{
+    text-align: center;
+}
+
+.gallery .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+
+.newsletter{
+    background-color: var(--bg-color);
+    padding: 100px ;
+}
+.newsletter-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.newsletter-text h2{
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--text2-color);
+}
+.newsletter-text p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.newsletter-content form{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 1rem;
+}
+.newsletter-content form input:first-child{
+    padding: 15px;
+    background: aliceblue;
+    font-size: 1rem;
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    align-items: center;
+    gap: 2rem;
+}
+.box h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;  
+    color: var(--text3-color);  
+}
+.box h4{
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--text3-color);
+}
+.box p{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text3-color);
+}
+.box i{
+    font-size: 15px;
+    margin: 10px;
+}
+
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #8f755f;
+    color: var(--text2-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 8px;
+    font-size: 20px;
+    transition: transform 0.6s;
+}
+.social a:hover{
+    background: var(--bg-color);
+    transform: translateX(-4px);
+}
+
+.copyright p{
+    color: var(--text3-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+
+
+@media (max-width: 1700px) {
+    header{
+        padding: 18px 8%;
+    }
+    header.sticky{
+        padding: 7px 8%;
+    }
+    section{
+        padding: 50px 8% 40px;
+    }
+}
+@media (max-width: 1200px) {
+    header{
+        padding: 14px 5%;
+    }
+    header.sticky{
+        padding: 7px 5%;
+    }
+    section{
+        padding: 45px 5% 35px;
+    }
+    .home{
+        height: 90vh;
+    }
+}
+@media (max-width: 1050px) {
+    .menu-cards{
+        gap: 25px;
+    }
+    .about{
+        gap: 3rem;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .menu{
+        padding: 20px 1% ;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 60px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg2-color);
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        color: var(--text3-color);
+        padding: 0;
+        margin: 0px 0px 40px 0px;
+        font-size: 1.4rem;
+    }
+    .navbar.open{
+        left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu{
+        height: auto;
+    }
+    .newsletter-content{
+        grid-template-columns: 1fr;
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 500px){
+    header{
+        padding: 12px 3%;
+    }
+    header.sticky{
+        padding: 7px 3%;
+    }
+    section{
+        padding: 50px 3% 50px;
+    }
+}
